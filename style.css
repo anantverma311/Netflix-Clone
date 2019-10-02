@@ -1,0 +1,161 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: Helvetica Neue; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #151415;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  background-image: url(./Assets/banner_netflix.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+header {
+  display: flex;
+  width: 100%;
+  /* background: pink; */
+  margin: auto;
+  align-items: center;
+  height: 12vh;
+}
+.nav_links,
+.brand,
+.right_navs {
+  display: flex;
+}
+.brand {
+  /* background-color: aqua; */
+  flex: 1;
+  margin-left: 4.4%;
+}
+nav {
+  /* background: yellow; */
+  flex: 8;
+}
+.nav_links {
+  list-style-type: none;
+  /* background-color: orange; */
+}
+.nav_link:hover {
+  color: #d1d1d1;
+}
+.nav_link {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 15px;
+  text-shadow: #151415;
+  font-weight: 400;
+}
+.right_navs {
+  flex: 2;
+  color: white;
+  font-size: 18px;
+  text-shadow: #151415;
+  font-weight: 400;
+  cursor: pointer;
+}
+.right_navs :hover {
+  color: #d1d1d1;
+}
+.fas fa-search,
+.right_side_child,
+.fas fa-bell,
+.right_side_log {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.right_side_child {
+  font-size: 15px;
+}
+.right_side_log {
+  font-size: 15px;
+}
+/* carousal css start */
+.scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.scroll::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+  display: none;
+  scrollbar-width: none; // Firefox
+}
+.car_head {
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-left: 4.7%;
+}
+.carousel {
+  display: grid;
+  grid-auto-flow: row;
+  overflow-x: unset;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 10px;
+  margin-left: 4.4%;
+}
+
+.item {
+  height: 125px;
+  width: 250px;
+  /* background-color: #f1c40f; */
+  border: 5px solid #151415;
+}
+.car_slide {
+  display: flex;
+}
+.carousel,
+.item {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.item {
+  transform-origin: center left;
+}
+
+.carousel:hover {
+  -webkit-transform: translate3d(-62.5px, 0, 0);
+  transform: translate3d(-62.5px, 0, 0);
+}
+
+.carousel:hover .item {
+  opacity: 0.1;
+}
+
+.carousel:hover .item:hover {
+  transform: scale(1.5);
+  opacity: 2;
+}
+
+.item:hover ~ .item {
+  transform: translate3d(90px, 0, 0);
+}
+
+/* carousal css end */
+
+/* footer css */
+.footer {
+  position: relative;
+  left: 0;
+  margin-top: 8%;
+  padding: 5px;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
